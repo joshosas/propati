@@ -77,7 +77,7 @@
                         <a href="/contact" class="nav-item nav-link">Contact</a>
                         <a href="/login" class="nav-item nav-link">Login</a>
                     </div>
-                    <a href="/create" class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                    <a href="/register" class="btn btn-primary px-3 d-none d-lg-flex">Become an Agent</a>
                 </div>
             </nav>
         </div>

@@ -33,7 +33,7 @@ class HouseFactory extends Factory
             'square_footage' => $this->faker->numberBetween(500, 5000),
             'lot_size' => $this->faker->numberBetween(1000, 10000),
             'year_built' => $this->faker->numberBetween(1950, 2022),
-            'property_type' => $this->faker->randomElement(['single-family home', 'condo', 'apartment']),
+            'property_type' => $this->faker->randomElement(['apartment', 'office', 'shop', 'land']),
             'amenities' => $this->faker->sentence(5),
             'contact_name' => $this->faker->name,
             'contact_email' => $this->faker->email,
