@@ -5,7 +5,7 @@
              <h1 class="display-5 animated fadeIn mb-4">A <span class="text-primary">Perfect Home</span> To Live With Your Family</h1>
              <p class="animated fadeIn mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet
                  sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-             <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Find an Apartment</a>
+             <a href="/properties" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Find an Apartment</a>
          </div>
          <div class="col-md-6 animated fadeIn">
              <div class="owl-carousel header-carousel">

@@ -113,10 +113,41 @@ class HouseController extends Controller
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function properties()
+    // HouseController.php
+
+
+    public function properties(Request $request)
     {
+        $query = House::query();
+
+        // Handle search query
+        if ($request->has('search')) {
+            $searchTerm = $request->input('search');
+            $query->where('title', 'like', '%' . $searchTerm . '%')
+                ->orWhere('description', 'like', '%' . $searchTerm . '%')
+                ->orWhere('price', 'like', '%' . $searchTerm . '%')
+                ->orWhere('city', 'like', '%' . $searchTerm . '%')
+                ->orWhere('bedrooms', 'like', '%' . $searchTerm . '%')
+                ->orWhere('property_type', 'like', '%' . $searchTerm . '%');
+        }
+
+        // Handle property type filters
+        if ($request->filled('property_type')) {
+            $propertyType = $request->input('property_type');
+            $query->where('property_type', $propertyType);
+        }
+
+        // Handle location filters/
+        if ($request->filled('location')) {
+            $location = $request->input('location');
+            $query->where('location', $location);
+        }
+        // Add more filtering logic for other dropdowns if needed
+
+        $houses = $query->latest()->paginate(18);
+
         return view('pages.properties', [
-            'houses' => House::latest()->paginage(18)
+            'houses' => $houses
         ]);
     }
 }

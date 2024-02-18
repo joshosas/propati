@@ -61,10 +61,10 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Properties</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="/apartment" class="dropdown-item">Apartment</a>
-                                <a href="/office" class="dropdown-item">Office</a>
-                                <a href="/shop" class="dropdown-item">Shop</a>
-                                <a href="/land" class="dropdown-item">Land</a>
+                                <a href="/properties?property_type=Apartment" class="dropdown-item">Apartment</a>
+                                <a href="/properties?property_type=Office" class="dropdown-item">Office</a>
+                                <a href="/properties?property_type=Shop" class="dropdown-item">Shop</a>
+                                <a href="/properties?property_type=Land" class="dropdown-item">Land</a>
                             </div>
                         </div>
                         <!-- <div class="nav-item dropdown">

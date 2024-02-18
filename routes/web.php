@@ -25,7 +25,8 @@ Route::get('/', [HouseController::class, 'index']);
 Route::get('/about', [HouseController::class, 'about']);
 
 // Show properties page
-Route::get('/properties', [HouseController::class, 'properties']);
+Route::get('/properties', [HouseController::class, 'properties'])->name('properties');
+Route::get('/properties/search', [HouseController::class, 'properties'])->name('properties.search');
 
 // Contact Page
 Route::get('/contact', [HouseController::class, 'contact']);
@@ -47,6 +48,7 @@ Route::delete('/houses/{house}', [HouseController::class, 'destroy']);
 
 // Manage Houses
 Route::get('/houses/manage', [HouseController::class, 'manage']);
+
 
 // Show a single house
 Route::get('/houses/{house}', [HouseController::class, 'show']);

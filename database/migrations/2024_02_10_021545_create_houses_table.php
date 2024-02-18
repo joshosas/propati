@@ -27,6 +27,7 @@ return new class extends Migration
             $table->integer('lot_size')->nullable(); // Lot size
             $table->integer('year_built')->nullable(); // Year built
             $table->string('property_type')->nullable(); // Property type
+            $table->string('sale_rent')->nullable(); // Sale or  Rent
             $table->text('amenities')->nullable(); // Amenities
             $table->text('photos')->nullable(); // Photos (upload multiple photos)
             $table->string('contact_name')->nullable(); // Contact information (name)
