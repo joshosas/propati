@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('property_type')->nullable(); // Property type
             $table->string('sale_rent')->nullable(); // Sale or  Rent
             $table->text('amenities')->nullable(); // Amenities
-            $table->text('photos')->nullable(); // Photos (upload multiple photos)
+            $table->text('image')->nullable(); // image (upload multiple photos)
             $table->string('contact_name')->nullable(); // Contact information (name)
             $table->string('contact_email')->nullable(); // Contact information (email)
             $table->string('contact_phone')->nullable(); // Contact information (phone number)

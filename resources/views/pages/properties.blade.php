@@ -9,6 +9,9 @@
         <x-property_card :house="$house" />
         @endforeach
     </x-property_wrapper>
+    <div class="d-flex justify-content-center mt-4">
+        {{ $houses->links() }} <!-- Pagination links -->
+    </div>
     @else
     <h5>No Property Available!</h5>
 

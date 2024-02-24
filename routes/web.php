@@ -31,11 +31,11 @@ Route::get('/properties/search', [HouseController::class, 'properties'])->name('
 // Contact Page
 Route::get('/contact', [HouseController::class, 'contact']);
 
-// Show Add House Page
+// Show Create Page
 Route::get('/create', [HouseController::class, 'create']);
 
 // Store House
-Route::post('/store', [HouseController::class, 'store']);
+Route::post('/houses', [HouseController::class, 'store']);
 
 // Show Edit page
 Route::get('/houses/{house}/edit', [HouseController::class, 'edit']);
@@ -49,9 +49,9 @@ Route::delete('/houses/{house}', [HouseController::class, 'destroy']);
 // Manage Houses
 Route::get('/houses/manage', [HouseController::class, 'manage']);
 
-
 // Show a single house
 Route::get('/houses/{house}', [HouseController::class, 'show']);
+
 
 
 // ************ USER CONTROLLERS********** //
