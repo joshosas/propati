@@ -32,41 +32,46 @@ Route::get('/properties/search', [HouseController::class, 'properties'])->name('
 Route::get('/contact', [HouseController::class, 'contact']);
 
 // Show Create Page
-Route::get('/create', [HouseController::class, 'create']);
+Route::get('/create', [HouseController::class, 'create'])->middleware('auth');
 
 // Store House
 Route::post('/houses', [HouseController::class, 'store']);
 
 // Show Edit page
-Route::get('/houses/{house}/edit', [HouseController::class, 'edit']);
+Route::get('/houses/{house}/edit', [HouseController::class, 'edit'])->middleware('auth');
 
 // Update House
-Route::put('/houses/{house}', [HouseController::class, 'update']);
+Route::put('/houses/{house}', [HouseController::class, 'update'])->middleware('auth');
 
 // Delete House
-Route::delete('/houses/{house}', [HouseController::class, 'destroy']);
+Route::delete('/houses/{house}', [HouseController::class, 'destroy'])->middleware('auth');
 
 // Manage Houses
-Route::get('/houses/manage', [HouseController::class, 'manage']);
+Route::get('/houses/manage', [HouseController::class, 'manage'])->middleware('auth');
 
 // Show a single house
 Route::get('/houses/{house}', [HouseController::class, 'show']);
+
+Route::fallback(function () {
+    return view('pages.404');
+});
+
 
 
 
 // ************ USER CONTROLLERS********** //
 
 // Show User registration page
-Route::get('/register', [UserController::class, 'register']);
+Route::get('/register', [UserController::class, 'register'])->middleware('guest');
 
 // Handle User registration
 Route::post('/users', [UserController::class, 'store']);
 
 // Logout User
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 // Show Login page
-Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 // Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);

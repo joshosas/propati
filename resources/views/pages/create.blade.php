@@ -2,7 +2,7 @@
 
 <!-- Back Button -->
 <div class="container mt-3">
-    <a href="/properties" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Back</a>
+    <a href="/houses/manage" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Back</a>
 </div>
 
 <div class="container mt-5">

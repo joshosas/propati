@@ -1,6 +1,17 @@
 @include('partials._nav')
 
 <div class="container py-5">
+
+    <div class="row justify-content-between align-items-center mb-4">
+        <div class="col-md-6">
+            <h4 class="text-primary">Welcome {{ auth()->user()->first_name }}</h4>
+        </div>
+        <div class="col-md-6 text-end">
+            <a href="/create" class="btn btn-secondary">Add Property</a>
+        </div>
+    </div>
+
+
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">

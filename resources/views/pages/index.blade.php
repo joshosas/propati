@@ -1,21 +1,21 @@
-<x-layout>
+@include('partials._nav')
 
-    @include('partials._header')
+@include('partials._header')
 
-    @unless(count($houses) == 0)
-    <x-property_wrapper>
-        @foreach($houses as $house)
-        <x-property_card :house="$house" />
-        @endforeach
-    </x-property_wrapper>
-    @else
-    <h5> </h5>
+@unless(count($houses) == 0)
+<x-property_wrapper>
+    @foreach($houses as $house)
+    <x-property_card :house="$house" />
+    @endforeach
+</x-property_wrapper>
+@else
+<h5> </h5>
 
-    @endunless
+@endunless
 
 
 
-</x-layout>
+@include('partials._footer')
 
 <!-- <h2>Lorem Ipsum</h2>
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem nam saepe, pariatur sunt dolor odio ratione illum tempore amet, error quibusdam similique tenetur corrupti itaque ex modi, explicabo hic porro.</p> -->

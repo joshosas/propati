@@ -89,7 +89,7 @@ class HouseController extends Controller
 
         House::create($formFields);
 
-        return redirect('/')->with('message', 'Property added successfully.');
+        return redirect('/houses/manage')->with('message', 'Property added successfully.');
     }
 
 
@@ -154,7 +154,7 @@ class HouseController extends Controller
 
         $house->update($formFields);
 
-        return view('pages.show', [
+        return view('pages.manage', [
             'house' => $house
         ])->with('message', 'Property updated successfully');
     }
