@@ -28,6 +28,19 @@
                     <p><strong>Additional Details:</strong> {{ $house->additional_details }}</p>
                 </div>
             </div>
+            <div class="mt-4 p-2 flex space-x-6">
+                <a href="/houses/{{$house->id}}/edit">
+                    <i class="fa-solid fa-pencil me-1"></i>Edit
+                </a>
+
+                <form action="/houses/{{$house->id}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this Property?')">
+                    @csrf
+                    @method('DELETE')
+                    <button class=" text-danger-500">
+                        <i class="fa-solid fa-trash"></i>Delete
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

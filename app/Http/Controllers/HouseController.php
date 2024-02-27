@@ -89,7 +89,7 @@ class HouseController extends Controller
 
         House::create($formFields);
 
-        return redirect()->back()->with('success', 'Property added successfully.');
+        return redirect('/')->with('message', 'Property added successfully.');
     }
 
 
@@ -156,7 +156,7 @@ class HouseController extends Controller
 
         return view('pages.show', [
             'house' => $house
-        ])->with('message', 'House Updated successfully');
+        ])->with('message', 'Property updated successfully');
     }
 
     /**
@@ -165,9 +165,11 @@ class HouseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(House $house)
     {
-        //
+        $house->delete();
+
+        return redirect('/houses/manage')->with('message', 'Property successfully deleted');
     }
 
     /**
@@ -230,6 +232,15 @@ class HouseController extends Controller
 
         return view('pages.properties', [
             'houses' => $houses
+        ]);
+    }
+
+    // MANAGE HOUSES
+    public function manage()
+    {
+
+        return view('pages.manage', [
+            'houses' => House::all()
         ]);
     }
 }

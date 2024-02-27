@@ -148,20 +148,19 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0"> &copy; <a class="border-bottom" href="#">Propati</a>, All Right Reserved.
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
 
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Layout from <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                            Layout from <a class="border-bottom" href="https://htmlcodex.com">HTML Codex.</a> Application developed by <a class="border-bottom" href="https://impactlightworld.com.ng">impactlight World</a>
                         </div>
-                        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Propati</a>, All Right Reserved.
+                        <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="/">Propati</a>, {{ date('Y') }}, All Right Reserved.
+                        </div>
 
-                            Developed by <a class="border-bottom" href="https://impactlightworld.com.ng">impactlight World</a>
-                        </div>
-                        <div class="col-md-4 text-center text-md-end">
+                        <div class="col-md-3 text-center text-md-end">
                             <div class="footer-menu">
                                 <a href="/">Home</a>
-                                <a href="/about">About</a>
+                                <!-- <a href="/about">About</a> -->
                                 <a href="/properties">Properties</a>
                                 <a href="/contact">Contact</a>
                             </div>
@@ -178,6 +177,7 @@
     </div>
 
     <!-- JavaScript Libraries -->
+    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
@@ -187,6 +187,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <x-flash-message />
 </body>
 
 </html>
