@@ -1,3 +1,5 @@
+@include('partials._spinner')
+
 @include('partials._nav')
 
 <!-- About Start -->

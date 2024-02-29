@@ -16,6 +16,6 @@ class HousesTableSeeder extends Seeder
     public function run()
     {
         // Use the factory() function provided by Laravel to generate dummy data
-        House::factory()->count(50)->create();
+        House::factory()->count(24)->create();
     }
 }

@@ -1,4 +1,4 @@
-@include('partials._footer')
+@include('partials._nav')
 
 <h1 class="display-5 my-5 text-center animated fadeIn mb-4">All Properties</h1>
 @include('partials._search')

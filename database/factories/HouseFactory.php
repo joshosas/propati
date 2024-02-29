@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\House;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -21,7 +22,10 @@ class HouseFactory extends Factory
      */
     public function definition()
     {
+        // Get all user IDs
+        $userIds = User::pluck('id')->toArray();
         return [
+            'user_id' => $this->faker->randomElement($userIds),
             'title' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
             'price' => $this->faker->numberBetween(10000, 1000000),
@@ -40,6 +44,7 @@ class HouseFactory extends Factory
             'contact_email' => $this->faker->email,
             'contact_phone' => $this->faker->phoneNumber,
             'additional_details' => $this->faker->paragraph
+            // 'image' => $this->faker->imageUrl()
         ];
     }
 }

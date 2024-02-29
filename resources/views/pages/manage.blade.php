@@ -56,4 +56,25 @@
     </div>
 </div>
 
+<div class="container-fluid bg-light py-4">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md-6">
+                <p class="mb-0">Logged in as:</p>
+                <h5 class="mb-0">{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</h5>
+            </div>
+            <!-- <div class="col-md-4 text-end">
+                <p class="mb-0">Email:</p>
+                <p class="mb-0">{{ auth()->user()->email }}</p>
+            </div> -->
+            <div class="col-md-2 text-end">
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-primary">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 @include('partials._footer')

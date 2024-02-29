@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\House;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HouseController extends Controller
@@ -86,6 +87,8 @@ class HouseController extends Controller
         foreach ($optionalFields as $field) {
             $formFields[$field] = $request->input($field, ''); // or use null if preferred
         }
+
+        $formFields['user_id'] = auth()->id();
 
         House::create($formFields);
 
@@ -240,7 +243,7 @@ class HouseController extends Controller
     {
 
         return view('pages.manage', [
-            'houses' => House::all()
+            'houses' => auth()->user()->houses()->get()
         ]);
     }
 }
