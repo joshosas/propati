@@ -74,7 +74,7 @@ To run the Propati application locally, follow these steps:
 
 ## Credits
 
-Propati was created by [Your Name] as a project for [Purpose/Assignment]. It utilizes the PHP Laravel framework, Laravel Blade templating engine, and Bootstrap for styling.
+Propati was created by Joshua Aigbiremmhon as a project to test his mastery of PHP and Laravel. It utilizes the PHP Laravel framework, Laravel Blade templating engine, and Bootstrap for styling.
 
 ## License
 
